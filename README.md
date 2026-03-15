@@ -89,6 +89,38 @@ centroide = np.sum(frec_pos * mag_pos) / np.sum(mag_pos)
 ```python
 rms = np.sqrt(np.mean(audio**2))
 ```
+
+### 6. Resultados obtenidos
+#### 6.1 Gráficas generadas de señal de voz, Espectro de magnitud, Densidad espectral de potencia (de cada persona)
+
+**Hombre 1:**
+![Hombre1](Hombre1.png)
+
+**Hombre 2:**
+![Hombre2](Hombre2.png)
+
+**Hombre 3:**
+![Hombre3](Hombre3.png)
+
+**Mujer 1:**
+![Mujer1](Mujer1.png)
+
+**Mujer 2:**
+![Mujer2](Mujer2.png)
+
+**Mujer 3:**
+![Mujer3](Mujer3.png)
+
+#### 6.2 Tabla de parámetros extraídos
+
+| Audio | Género | F0 (Hz) | Centroide (Hz) | RMS | 
+|---|---|---|---|---|
+| hombre1 | M | 110.34 | 2322.75 | 0.177 | 
+| hombre2 | M | 142.01 | 2774.47 | 0.142 | 
+| hombre3 | M | 111.63 | 2724.88 | 0.127 | 
+| mujer1  | F | 233.01 | 2597.82 | 0.135 | 
+| mujer2  | F | 271.19 | 3871.48 | 0.123 | 
+| mujer3  | F | 199.17 | 2684.45 | 0.133 | 
  
 ## PARTE B – Medición de Jitter y Shimmer
 
@@ -103,7 +135,7 @@ audio_env = np.abs(signal.hilbert(audio_filtrado))
 peaks, _ = signal.find_peaks(audio_env, distance=int(fs/f0*0.8), prominence=0.01)
 ```
  
-**Jitter relativo** (variación de periodo ciclo a ciclo):
+**1. Jitter relativo** (variación de periodo ciclo a ciclo):
  
 $$Jitter_{rel} = \frac{\frac{1}{N-1}\sum_{i=1}^{N-1}|T_i - T_{i+1}|}{\frac{1}{N}\sum_{i=1}^{N}T_i} \times 100$$
  
@@ -115,7 +147,7 @@ jitter_abs = np.mean(np.abs(np.diff(periodos)))
 jitter_rel = (jitter_abs / np.mean(periodos)) * 100
 ```
 
-**Shimmer relativo** (variación de amplitud ciclo a ciclo):
+**2. Shimmer relativo** (variación de amplitud ciclo a ciclo):
  
 $$Shimmer_{rel} = \frac{\frac{1}{N-1}\sum_{i=1}^{N-1}|A_i - A_{i+1}|}{\frac{1}{N}\sum_{i=1}^{N}A_i} \times 100$$
  
@@ -126,6 +158,17 @@ shimmer_abs = np.mean(np.abs(np.diff(amplitudes)))
 # Shimmer_rel = Shimmer_abs / mean(Ai) * 100
 shimmer_rel = (shimmer_abs / np.mean(amplitudes)) * 100
 ```
- 
---- 
- 
+
+**3. Resultados obtenidos** 
+| Audio | Género | Jitter (%) | Shimmer (%) |
+|---|---|---|---|
+| hombre1 | M |7.84 | 17.32 |
+| hombre2 | M |11.64 | 20.28 |
+| hombre3 | M |6.96 | 14.76 |
+| mujer1  | F |8.22 | 16.61 |
+| mujer2  | F |13.81 | 22.46 |
+| mujer3  | F |8.49 | 13.78 |
+---
+
+
+## PARTE C – Comparación y conclusiones 
