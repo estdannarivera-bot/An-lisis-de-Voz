@@ -109,7 +109,9 @@ $$Jitter_{rel} = \frac{\frac{1}{N-1}\sum_{i=1}^{N-1}|T_i - T_{i+1}|}{\frac{1}{N}
  
 ```python
 periodos   = np.diff(peaks) / fs
+# Jitter_abs = (1/N-1) * Σ|Ti - Ti+1|
 jitter_abs = np.mean(np.abs(np.diff(periodos)))
+# Jitter_rel = Jitter_abs / mean(Ti) * 100
 jitter_rel = (jitter_abs / np.mean(periodos)) * 100
 ```
 
@@ -119,7 +121,9 @@ $$Shimmer_{rel} = \frac{\frac{1}{N-1}\sum_{i=1}^{N-1}|A_i - A_{i+1}|}{\frac{1}{N
  
 ```python
 amplitudes  = audio_env[peaks]
+# Shimmer_abs = (1/N-1) * Σ|Ai - Ai+1|
 shimmer_abs = np.mean(np.abs(np.diff(amplitudes)))
+# Shimmer_rel = Shimmer_abs / mean(Ai) * 100
 shimmer_rel = (shimmer_abs / np.mean(amplitudes)) * 100
 ```
  
