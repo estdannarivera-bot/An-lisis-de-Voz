@@ -91,5 +91,37 @@ rms = np.sqrt(np.mean(audio**2))
 ```
  
 ## PARTE B – Medición de Jitter y Shimmer
+
+ #### Jitter y Shimmer
+Se aplicó un filtro pasa-banda Butterworth de orden 4, con rangos diferenciados por género (80–400 Hz para hombres, 150–500 Hz para mujeres). Los ciclos vocales se detectaron sobre la envolvente de Hilbert:
  
+```python
+# Envolvente
+audio_env = np.abs(signal.hilbert(audio_filtrado))
+ 
+# Detección de picos (ciclos vocales)
+peaks, _ = signal.find_peaks(audio_env, distance=int(fs/f0*0.8), prominence=0.01)
+```
+ 
+**Jitter relativo** (variación de periodo ciclo a ciclo):
+ 
+$$Jitter_{rel} = \frac{\frac{1}{N-1}\sum_{i=1}^{N-1}|T_i - T_{i+1}|}{\frac{1}{N}\sum_{i=1}^{N}T_i} \times 100$$
+ 
+```python
+periodos   = np.diff(peaks) / fs
+jitter_abs = np.mean(np.abs(np.diff(periodos)))
+jitter_rel = (jitter_abs / np.mean(periodos)) * 100
+```
+
+**Shimmer relativo** (variación de amplitud ciclo a ciclo):
+ 
+$$Shimmer_{rel} = \frac{\frac{1}{N-1}\sum_{i=1}^{N-1}|A_i - A_{i+1}|}{\frac{1}{N}\sum_{i=1}^{N}A_i} \times 100$$
+ 
+```python
+amplitudes  = audio_env[peaks]
+shimmer_abs = np.mean(np.abs(np.diff(amplitudes)))
+shimmer_rel = (shimmer_abs / np.mean(amplitudes)) * 100
+```
+ 
+--- 
  
