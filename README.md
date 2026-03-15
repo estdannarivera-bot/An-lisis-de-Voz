@@ -75,7 +75,7 @@ def calcular_f0(audio, fs):
     d     = np.diff(corr)
     start = np.where(d > 0)[0][0]
     peak  = np.argmax(corr[start:]) + start
-    return 1 / (peak / fs)
+    return f0
 ```
 
 #### 4. Centroide espectral (Brillo)
