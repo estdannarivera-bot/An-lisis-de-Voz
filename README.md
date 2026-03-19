@@ -115,12 +115,12 @@ rms = np.sqrt(np.mean(audio**2))
 
 | Audio | Género | F0 (Hz) | Centroide (Hz) | RMS | 
 |---|---|---|---|---|
-| hombre1 | M | 110.34 | 2322.75 | 0.177 | 
+| hombre1 | M | 127.08 | 1170.72 | 0.229 | 
 | hombre2 | M | 142.01 | 2774.47 | 0.142 | 
-| hombre3 | M | 111.63 | 2724.88 | 0.127 | 
-| mujer1  | F | 233.01 | 2597.82 | 0.135 | 
-| mujer2  | F | 271.19 | 3871.48 | 0.123 | 
-| mujer3  | F | 199.17 | 2684.45 | 0.133 | 
+| hombre3 | M | 112.78 | 1643.45 | 0.252 | 
+| mujer1  | F | 269.66 | 2203.74 | 0.143 | 
+| mujer2  | F | 229.66 | 2918.23 | 0.162 | 
+| mujer3  | F | 218.18 | 2821.79 | 0.149 | 
  
 ## PARTE B – Medición de Jitter y Shimmer
 
@@ -162,12 +162,12 @@ shimmer_rel = (shimmer_abs / np.mean(amplitudes)) * 100
 **3. Resultados obtenidos** 
 | Audio | Género | Jitter (%) | Shimmer (%) |
 |---|---|---|---|
-| hombre1 | M |7.84 | 17.32 |
-| hombre2 | M |11.64 | 20.28 |
-| hombre3 | M |6.96 | 14.76 |
-| mujer1  | F |8.22 | 16.61 |
-| mujer2  | F |13.81 | 22.46 |
-| mujer3  | F |8.49 | 13.78 |
+| hombre1 | M |1.24 | 3.01 |
+| hombre2 | M |1.68 | 3.93 |
+| hombre3 | M |0.88 | 3.89 |
+| mujer1  | F |1.50 | 2.86 |
+| mujer2  | F |0.37 | 4.20 |
+| mujer3  | F |1.16 | 3.23 |
 ---
 
 
