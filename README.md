@@ -170,5 +170,8 @@ shimmer_rel = (shimmer_abs / np.mean(amplitudes)) * 100
 | mujer3  | F |1.16 | 3.23 |
 ---
 
-
 ## PARTE C – Comparación y conclusiones 
+
+A partir de los resultados obtenidos, se identificaron diferencias claras entre las voces masculinas y femeninas en varios parámetros espectrales.
+
+![GráficaComparación](GráficaComparación.png)
