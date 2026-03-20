@@ -2,7 +2,7 @@
 ## Análisis espectral de la voz
 
 **Programa:** Ingeniería Biomédica  
-**Asignatura:** Procesamiento Digital de Señales  
+**Asignatura:** Procesamiento Digital de Señales
 **Universidad:** Universidad Militar Nueva Granada  
 **Estudiantes:** Danna Rivera, Duvan Paez
 
