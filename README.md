@@ -196,7 +196,11 @@ Los valores de jitter y shimmer se mantienen en rangos relativamente bajos en la
 
 ## Importancia clínica del Jitter y Shimmer**
 
+El jitter y el shimmer son parámetros clave en el análisis clínico de la voz, ya que permiten evaluar la estabilidad en la vibración de las cuerdas vocales, el jitter mide la variación en la frecuencia entre ciclos consecutivos, mientras que el shimmer mide la variación en la amplitud de la señal.
 
+En contextos clínicos, valores elevados de estos parámetros pueden estar asociados a trastornos como disfonías, alteraciones neurológicas o problemas en el control de la fonación. Por esta razón, son utilizados como herramientas de apoyo en el diagnóstico y seguimiento de patologías vocales.
+
+Sin embargo, es importante considerar que estos parámetros son sensibles al ruido y a las condiciones de grabación, por lo que deben interpretarse junto con otros análisis acústicos y evaluación clínica.
 
 ---
 
@@ -216,13 +220,15 @@ La frecuencia fundamental en las voces masculinas es menor que en las femeninas,
 
 **¿Qué limitaciones plantea el uso de características como shimmer y jitter para la detección de patologías como disartrias y afasias?**
 
+El uso de jitter y shimmer para la detección de patologías presenta varias limitaciones importantes. Estos parámetros son altamente sensibles al ruido en la señal y a la calidad de la grabación, lo que puede generar valores elevados sin que exista una patología real, 
+además, pueden verse afectados por factores no patológicos como la fatiga vocal, el estado emocional o la forma de pronunciación del hablante, por ello, no permiten establecer un diagnóstico por sí solos y deben complementarse con otros parámetros acústicos y evaluación clínica especializada.
 
 ---
 
 ## Conclusiones
 
-Se logró aplicar correctamente técnicas de procesamiento digital para el análisis de señales de voz, la frecuencia fundamental fue el parámetro más efectivo para diferenciar entre hombres y mujeres.
+El centroide espectral permitió identificar diferencias en el brillo de la señal entre voces masculinas y femeninas, evidenciando una mayor concentración de energía en altas frecuencias en las voces femeninas.
 
-El centroide espectral permitió identificar diferencias en el brillo de la señal. Mientras que los valores de jitter y shimmer indicaron una adecuada estabilidad vocal.
+Por su parte, los valores de jitter y shimmer indicaron una adecuada estabilidad vocal en las grabaciones analizadas, manteniéndose en su mayoría dentro de rangos esperados. Esto sugiere que las señales de voz no presentan irregularidades significativas en la vibración de las cuerdas vocales.
 
-
+En general, estos resultados demuestran que el análisis espectral es una herramienta útil no solo para la diferenciación de voces, sino también para la evaluación de la calidad y estabilidad de la señal.
