@@ -5,6 +5,8 @@
 **Asignatura:** Procesamiento Digital de Señales
 **Universidad:** Universidad Militar Nueva Granada  
 **Estudiantes:** Danna Rivera, Duvan Paez
+---
+
 
 ---
 
