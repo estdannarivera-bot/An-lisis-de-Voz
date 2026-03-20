@@ -7,6 +7,7 @@
 **Estudiantes:** Danna Rivera, Duvan Paez
 ---
 
+![Algoritmo](Algoritmo.png)
 
 ---
 
