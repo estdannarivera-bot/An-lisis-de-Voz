@@ -175,3 +175,54 @@ shimmer_rel = (shimmer_abs / np.mean(amplitudes)) * 100
 A partir de los resultados obtenidos, se identificaron diferencias claras entre las voces masculinas y femeninas en varios parámetros espectrales.
 
 ![GráficaComparación](GráficaComparación.png)
+
+**Frecuencia fundamental (F0)**
+
+Las voces masculinas presentan valores de frecuencia fundamental entre aproximadamente 112 Hz y 142 Hz, mientras que las voces femeninas están entre 218 Hz y 269 Hz. Este comportamiento coincide con lo esperado desde el punto de vista fisiológico, debido a que los hombres tienen cuerdas vocales más largas y gruesas, lo que produce vibraciones más lentas y una menor F0, mientras que las mujeres tienen cuerdas vocales más cortas y tensas, generando vibraciones más rápidas y una mayor F0.
+
+**Centroide espectral (brillo)**
+
+Se observa que las voces femeninas presentan un centroide espectral más alto, entre 2200 Hz y 2900 Hz, en comparación con los hombres, cuyos valores están entre 1100 Hz y 2700 Hz, esto indica que las voces femeninas concentran más energía en frecuencias altas, lo que se percibe como un sonido más brillante, por el contrario, las voces masculinas tienen un carácter más grave y menor contenido en altas frecuencias.
+
+**Intensidad (RMS)**
+
+En el RMS, no se observa una diferencia clara entre hombres y mujeres, los valores presentan variabilidad en ambos grupos, esto se puede deber a que la intensidad depende más de factores como la forma de grabación, la distancia al micrófono y la fuerza al hablar, que de características fisiológicas propias del género.
+
+**Jitter y Shimmer**
+
+Los valores de jitter y shimmer se mantienen en rangos relativamente bajos en la mayoría de las señales analizadas, algunos valores de jitter superan el 1%, mientras que el shimmer se mantiene cercano al rango típico de 3% a 5%. Estas variaciones pueden estar asociadas a ruido en la señal, condiciones de grabación o variaciones naturales de la voz, en general, no se evidencian irregularidades significativas en la estabilidad vocal.
+
+---
+
+## Importancia clínica del Jitter y Shimmer**
+
+
+
+---
+
+## Análisis
+
+Los resultados muestran que la frecuencia fundamental y el centroide espectral son los parámetros más relevantes para diferenciar voces masculinas y femeninas, estas diferencias están directamente relacionadas con la anatomía del sistema fonador, como la longitud y masa de las cuerdas vocales. Otros parámetros como RMS, jitter y shimmer aportan información complementaria.
+
+La práctica tuvo de limitaciones que las grabaciones fueron realizadas con dispositivos no especializados, lo que puede introducir ruido en la señal, además, no se controlaron completamente variables como la distancia al micrófono o el entorno. 
+
+---
+
+## Preguntas de discusión 
+
+**¿Cómo es la frecuencia fundamental de la densidad espectral de potencia asociada a una señal de voz masculina con respecto a la que se obtiene a partir de una señal de voz femenina, mayor o menor? ¿Qué hay del valor RMS?**
+
+La frecuencia fundamental en las voces masculinas es menor que en las femeninas, lo cual se evidenció claramente en los resultados, esto se debe a diferencias anatómicas en las cuerdas vocales. En cuanto al RMS, no se observa una diferencia significativa entre géneros, ya que este parámetro depende principalmente de las condiciones de grabación.
+
+**¿Qué limitaciones plantea el uso de características como shimmer y jitter para la detección de patologías como disartrias y afasias?**
+
+
+---
+
+## Conclusiones
+
+Se logró aplicar correctamente técnicas de procesamiento digital para el análisis de señales de voz, la frecuencia fundamental fue el parámetro más efectivo para diferenciar entre hombres y mujeres.
+
+El centroide espectral permitió identificar diferencias en el brillo de la señal. Mientras que los valores de jitter y shimmer indicaron una adecuada estabilidad vocal.
+
+
